@@ -1,13 +1,13 @@
 buildscript {
-	ext {
-		springBootVersion = '2.1.0.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+    ext {
+        springBootVersion = '2.1.0.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
 }
 
 apply plugin: 'java'
@@ -21,7 +21,7 @@ version = '0.0.1-SNAPSHOT'
 
 bootJar {
     baseName = 'log-persister'
-    version =  '0.1.0'
+    version = '0.1.0'
 }
 
 repositories {
@@ -32,25 +32,25 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-	compile("org.springframework.boot:spring-boot-starter-integration")
+    compile("org.springframework.boot:spring-boot-starter-integration")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
-	compile("org.springframework.boot:spring-boot-starter-web")
-	compile("org.springframework.integration:spring-integration-file")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.integration:spring-integration-file")
     compile('com.fasterxml.jackson.core:jackson-databind:2.9.4')
     compile('org.springframework.integration:spring-integration-jpa:5.1.0.RELEASE')
-    compileOnly ('org.projectlombok:lombok:1.18.4')
+    compileOnly('org.projectlombok:lombok:1.18.4')
     compile("com.h2database:h2")
-	testCompile("org.springframework.boot:spring-boot-starter-test")
-	testCompile("junit:junit")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile("junit:junit")
 }
 
 tasks.withType(JavaExec) {
-	standardInput = System.in
+    standardInput = System.in
 }
 
 
 eclipse {
-	project {
-		natures += 'org.springframework.ide.eclipse.core.springnature'
-	}
+    project {
+        natures += 'org.springframework.ide.eclipse.core.springnature'
+    }
 }
