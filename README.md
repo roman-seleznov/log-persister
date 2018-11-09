@@ -89,10 +89,11 @@ Log Persister uses one single thread to process one file. But it can be easily m
 
 For more details read: [Spring Integration File Support](https://docs.spring.io/spring-integration/reference/html/files.html)
 
-### Things to improve
+### Things to improve if I had more time
 
 * More verbose logs
 * More test coverage
 * Run static code analysys / code coverage tools 
 * Implement error handling using errorChannel
+* Add javadocs
 
